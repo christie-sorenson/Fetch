@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+<div id="display"></div>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        loadBooks();
+    });
+
+
+    /*  In this simple example, we first fetch the resource which returns a promise.
+        Then we call response.json() which also returns a promise.
+     */
+    function loadBooks() {
+        var display = document.getElementById('display');
+        display.innerHTML = '<ul>';
+        fetch('/api/books/').then( function(response) {
+            return response.json();
+        }).then(function(data) {
+            data.forEach(function(row){
+              display.innerHTML += '<li>' + row.title + ' - ' + row.author + '</li>';
+            });
+            display.innerHTML += '</ul>';
+        });
+    }
+
+
+</script>
+</body>
+</html>
