@@ -19,7 +19,7 @@
     function loadBooks() {
         var display = document.getElementById('display');
         display.innerHTML = '<ul>';
-        fetch('/api/books/').then( function(response) {
+        fetch('https://fetch-csorenson.c9users.io/api/books/').then( function(response) {
             return response.json();
         }).then(function(data) {
             data.forEach(function(row){

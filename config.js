@@ -1,8 +1,8 @@
 module.exports = {
-  DATABASE_HOST: 'localhost',
-  DATABASE_USER: 'codepicnic',
-  DATABASE_PASSWORD: 'c0de',
-  DATABASE_NAME: 'books',
+  DATABASE_HOST: '',
+  DATABASE_USER: '',
+  DATABASE_PASSWORD: '',
+  DATABASE_NAME: '',
   PORT: 3000,
   USERNAME: 'abc',
   PASSWORD: 'abc'
